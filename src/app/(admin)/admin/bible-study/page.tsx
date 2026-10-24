@@ -88,7 +88,7 @@ export default async function AdminBibleStudyPage() {
                   </td>
                 </tr>
               ) : (
-                requests.map((req) => (
+                requests.map((req: any) => (
                   <tr
                     key={req.id}
                     className="border-b border-[hsl(var(--border))] hover:bg-[hsl(var(--muted))]/30 transition-colors"

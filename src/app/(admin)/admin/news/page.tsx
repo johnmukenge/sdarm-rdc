@@ -58,7 +58,7 @@ export default async function AdminNewsPage() {
                   </td>
                 </tr>
               ) : (
-                news.map((item) => (
+                news.map((item: any) => (
                   <tr key={item.id} className="border-b border-[hsl(var(--border))] hover:bg-[hsl(var(--muted))]/30 transition-colors">
                     <td className="px-4 py-3 font-medium max-w-xs truncate">{item.title}</td>
                     <td className="px-4 py-3 text-[hsl(var(--muted-foreground))] hidden md:table-cell">{item.author.name}</td>
