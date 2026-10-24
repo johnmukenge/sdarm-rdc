@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
+import { DeleteNewsButton } from "@/components/delete-news-button";
 
 export const metadata: Metadata = { title: "Gérer les Actualités | Admin" };
 
@@ -77,9 +78,7 @@ export default async function AdminNewsPage() {
                             <Pencil className="h-4 w-4" />
                           </Link>
                         </Button>
-                        <Button variant="ghost" size="icon" title="Supprimer" className="text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20">
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
+                        <DeleteNewsButton newsId={item.id} />
                       </div>
                     </td>
                   </tr>
