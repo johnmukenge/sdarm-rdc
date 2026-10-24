@@ -32,7 +32,7 @@ export default async function AdminBibleStudyPage() {
     .findMany({ orderBy: { createdAt: "desc" } })
     .catch(() => []);
 
-  const pending = requests.filter((r) => r.status === "PENDING").length;
+  const pending = requests.filter((r: any) => r.status === "PENDING").length;
 
   return (
     <div className="space-y-6">
